@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_gravity="center"
+    android:background="@drawable/round_corners_white_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/room_details_dialog_iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"/>
+
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_details_dialog_iv_close"
+        app:layout_constraintBottom_toTopOf="@id/room_details_dialog_iv_bulbs"
+        android:id="@+id/room_details_dialog_tv_title"
+        android:text="@string/vizualizeaza_becurile_sau_electrocasnicele_din_camera"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:singleLine="false"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:id="@+id/room_details_dialog_iv_bulbs"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="12dp"
+        android:src="@drawable/bulbs"
+        app:layout_constraintEnd_toStartOf="@id/room_details_dialog_iv_appliances"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_details_dialog_tv_title"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/room_details_dialog_iv_appliances"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="12dp"
+        app:layout_constraintStart_toEndOf="@id/room_details_dialog_iv_bulbs"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/appliences"
+        app:layout_constraintTop_toBottomOf="@id/room_details_dialog_tv_title"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

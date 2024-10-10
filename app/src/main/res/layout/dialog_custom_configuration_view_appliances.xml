@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="12dp"
+    android:layout_marginHorizontal="10dp"
+    android:padding="1dp"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/round_corners_white_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/custom_configuration_view_appliance_dialog_iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/custom_configuration_view_appliance_dialog_cv_total"
+        android:clickable="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/custom_configuration_view_appliance_dialog_cv_total"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/custom_configuration_view_appliance_dialog_iv_close"
+        app:layout_constraintBottom_toTopOf="@id/custom_configuration_view_appliance_dialog_lv_appliances"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="8dp"
+
+        app:cardElevation="6dp"
+        app:cardCornerRadius="6dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/custom_configuration_view_appliance_dialog_tv_consumption_reduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+
+                android:maxWidth="300dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:maxLines="2"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/custom_configuration_view_appliance_dialog_tv_savings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:maxLines="2"
+                android:textSize="16sp"
+                android:layout_marginTop="2dp"
+
+                />
+
+            <TextView
+                android:id="@+id/custom_configuration_view_appliance_dialog_tv_co2_reduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:maxLines="2"
+                android:textSize="15sp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="6dp"
+
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ListView
+        android:id="@+id/custom_configuration_view_appliance_dialog_lv_appliances"
+        app:layout_constraintTop_toBottomOf="@id/custom_configuration_view_appliance_dialog_cv_total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+
+        android:nestedScrollingEnabled="true"
+        android:scrollingCache="true"
+        android:scrollbars="none"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

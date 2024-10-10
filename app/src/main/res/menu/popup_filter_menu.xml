@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_filter_clear"
+        android:icon="@drawable/ic_close"
+        android:title="@string/elimin_filtru"
+        ></item>
+
+    <item android:id="@+id/menu_filter_ac"
+        android:title="aere condiționate"></item>
+    <item android:id="@+id/menu_filter_fridge"
+        android:title="frigidere"></item>
+    <item android:id="@+id/menu_filter_freezer"
+        android:title="lăzi frigorifice"></item>
+    <item android:id="@+id/menu_filter_washer"
+        android:title="mașini de spălat"></item>
+    <item android:id="@+id/menu_filter_dish_washer"
+        android:title="mașini de spălat vase"
+        android:enabled="true">
+    </item>
+    <item android:id="@+id/menu_filter_tv"
+        android:title="televizoare"></item>
+    <item android:id="@+id/menu_filter_display"
+        android:title="monitoare"></item>
+    <item android:id="@+id/menu_filter_boiler"
+        android:title="boilere"></item>
+    <item android:id="@+id/menu_filter_oven"
+        android:title="cuptoare electrice"></item>
+    <item android:id="@+id/menu_filter_pc"
+        android:title="desktop pc"></item>
+    <item android:id="@+id/menu_filter_microwaves"
+        android:title="cuptoare cu microunde"></item>
+    <item android:id="@+id/menu_filter_printer"
+        android:title="imprimante"></item>
+    <item android:id="@+id/menu_filter_purifier"
+        android:title="filtrare aer"></item>
+
+
+
+</menu>

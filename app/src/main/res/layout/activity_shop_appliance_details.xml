@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopApplianceDetailsActivity"
+    android:fitsSystemWindows="true"
+    android:background="@color/light_gray"
+    android:id="@+id/shop_appliance_details_cl_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shop_appliance_details_cl_appliance_details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="6dp"
+
+        android:background="@drawable/bottom_round_white_bg"
+        android:elevation="10dp"
+        android:paddingHorizontal="6dp"
+        android:paddingBottom="6dp"
+        android:paddingTop="4dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:transitionName="@string/animImage"
+            android:id="@+id/shop_appliance_details_iv_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="6dp"
+            android:minHeight="125dp"
+            android:maxHeight="150dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/appliance_not_found"
+            android:contentDescription="@string/animImage"/>
+
+        <TextView
+            android:id="@+id/shop_appliance_details_tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="@+id/shop_appliance_details_iv_save"
+            app:layout_constraintEnd_toStartOf="@id/shop_appliance_details_iv_save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/shop_appliance_details_iv_save" />
+
+        <ImageView
+            android:id="@+id/shop_appliance_details_iv_save"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_green_favorite_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/shop_appliance_details_tv_title"
+            app:layout_constraintTop_toBottomOf="@id/shop_appliance_details_iv_image"
+
+            android:contentDescription="@string/vector_icon"
+            />
+
+        <TextView
+            android:id="@+id/shop_appliance_details_tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/description"
+            android:textColor="@color/medium_gray_text"
+            android:textSize="15sp"
+            android:maxLines="6"
+
+            android:overScrollMode="always"
+
+            app:layout_constraintBottom_toTopOf="@id/shop_appliance_details_ll_consumption"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shop_appliance_details_iv_save" />
+
+        <LinearLayout
+            android:baselineAligned="false"
+            android:id="@+id/shop_appliance_details_ll_consumption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop_appliance_details_tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp">
+
+                <TextView
+                    android:id="@+id/shop_appliance_details_tv_consumption_measure_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/medium_gray_text"
+                    android:maxLines="1"
+                    android:text="@string/putere"
+                    app:layout_constraintEnd_toEndOf="@id/shop_appliance_details_cv"
+                    app:layout_constraintStart_toStartOf="@id/shop_appliance_details_cv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textAlignment="center"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/shop_appliance_details_cv"
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toBottomOf="@id/shop_appliance_details_tv_consumption_measure_type"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:cardCornerRadius="10dp"
+                    android:elevation="30dp"
+                    android:fadingEdge="vertical"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="12dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:minWidth="65dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_power"
+                            android:contentDescription="@string/vector_icon"
+                            app:tint="@color/ligh_green" />
+
+                        <TextView
+                            android:id="@+id/shop_appliance_details_tv_consumption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/format_power"
+                            android:textAlignment="center"
+                            android:textColor="@color/medium_gray_text"
+                            />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp">
+
+                <TextView
+                    android:id="@+id/shop_appliance_details_tv_eff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/medium_gray_text"
+                    android:maxLines="1"
+                    android:text="@string/clas_eficien"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/shop_appliance_details_tv_eff"
+                    app:layout_constraintEnd_toEndOf="@id/shop_appliance_details_tv_eff"
+                    app:layout_constraintTop_toBottomOf="@id/shop_appliance_details_tv_eff"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:cardCornerRadius="10dp"
+                    android:elevation="30dp"
+                    android:fadingEdge="vertical"
+
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="12dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:minWidth="65dp"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_sort"
+                            android:contentDescription="@string/vector_icon"
+                            app:tint="@color/mustard" />
+
+                        <TextView
+                            android:id="@+id/shop_appliance_details_tv_efficiency_class"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/medium_gray_text"
+                            />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/shop_appliance_details_tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:text="@string/price_details_format"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop_appliance_details_ll_consumption"
+            app:layout_constraintVertical_bias="0.0"
+            />
+
+        <TextView
+            android:id="@+id/shop_appliance_details_tv_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="12dp"
+            android:text="@string/cump_r_aici"
+            android:background="@drawable/underline_bg"
+            android:textSize="15sp"
+            android:textStyle="italic"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/shop_appliance_details_tv_price"
+
+            app:layout_constraintTop_toBottomOf="@id/shop_appliance_details_ll_consumption"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/shop_appliance_details_tv_replace_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/nlocuire_pentru"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@id/shop_appliance_details_cl_replace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shop_appliance_details_cl_appliance_details"
+        app:layout_constraintVertical_bias="0.95"
+        android:textAllCaps="true"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:visibility="gone"
+
+        android:id="@+id/shop_appliance_details_cl_replace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:background="@drawable/round_corners_white_bg"
+        android:elevation="1dp"
+
+        >
+
+        <Spinner
+            android:id="@+id/shop_appliance_details_spn_appliance_to_replace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginVertical="4dp"
+            android:layout_marginHorizontal="10dp"
+
+            />
+
+        <TextView
+            android:id="@+id/shop_appliance_details_tv_consumption_reduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop_appliance_details_spn_appliance_to_replace"
+            android:layout_marginVertical="3dp"
+            android:textSize="15sp"
+
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textAlignment="viewStart"
+            />
+
+        <TextView
+            android:id="@+id/shop_appliance_details_tv_savings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop_appliance_details_tv_consumption_reduction"
+            android:layout_marginVertical="3dp"
+            android:textSize="15sp"
+
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textAlignment="viewStart"
+
+            />
+
+        <TextView
+            android:id="@+id/shop_appliance_details_tv_co2_emissions_reduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop_appliance_details_tv_savings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp"
+
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textAlignment="viewStart"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

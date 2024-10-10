@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BulbsViewActivity"
+    android:background="@color/white_smoke">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/ligh_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bulbs_view_ll_header" />
+
+    <LinearLayout
+        android:id="@+id/bulbs_view_ll_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:elevation="10dp"
+
+        android:background="@drawable/view_activity_header_bg"
+        >
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bulbs_view_tv_title"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/becurile_mele"
+                android:textColor="@color/dark_gray"
+                android:maxWidth="200dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/bulbs_view_iv_add_bulb"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@string/vector_icon"
+                android:focusable="true"
+                android:src="@drawable/ic_add" />
+
+        </LinearLayout>
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="35dp"
+           android:layout_marginEnd="20dp"
+           app:boxBackgroundColor="@color/white_smoke"
+           app:startIconDrawable="@drawable/ic_search"
+           app:boxCornerRadiusBottomEnd="5dp"
+           app:boxCornerRadiusBottomStart="5dp"
+           app:boxCornerRadiusTopEnd="5dp"
+           app:boxCornerRadiusTopStart="5dp"
+           style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+           app:hintTextColor="@color/dark_gray"
+           app:boxStrokeWidth="0dp"
+
+           app:boxStrokeColor="@color/medium_gray"
+           android:textColorHint="@android:color/darker_gray"
+
+           >
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/bulbs_view_tiet_filter"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/cauta_dupa_denumire"
+               android:textSize="16sp" />
+
+       </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="35dp"
+            android:layout_marginBottom="25dp">
+
+            <CheckBox
+                android:id="@+id/bulbs_view_cb_sort"
+                android:button="@null"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sorteaza_dupa_consum"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/bulbs_view_iv_sort_order"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_arrow_upward"
+                android:contentDescription="@string/vector_icon"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/bulbs_view_lv_bulbs"
+        app:layout_constraintTop_toBottomOf="@id/bulbs_view_ll_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:scrollbars="none"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        ></ListView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    tools:context=".fragments.GraphicsFragment">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fragment_graphics_fab_save_file"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:outlineSpotShadowColor="@color/transparent"
+        android:outlineAmbientShadowColor="@color/transparent"
+        app:rippleColor="@color/transparent"
+         />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fragment_graphics_fab_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_download"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_graphics_fab_save_file"
+        android:layout_marginEnd="8dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fragment_graphics_fab_send_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_email"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_graphics_fab_download"
+        android:layout_marginEnd="8dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true"
+        android:nestedScrollingEnabled="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_graphics_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/fragment_graphics_tv_month_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="MAI, 2020"
+                android:textColor="@color/black"
+
+                android:textFontWeight="900"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.117"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/fragment_graphics_cv_consumption_details"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fragment_graphics_cv_consumption_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_graphics_tv_month_year"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="@color/white_smoke"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="2dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Consum total KWh:"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+
+                            android:layout_margin="4dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cheltuieli totale lei:"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_margin="4dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Emisii CO2 kg:"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_margin="4dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="2dp"
+                        android:minWidth="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fragment_graphics_tv_this_month_consumption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+
+                            android:layout_margin="4dp"/>
+                        <TextView
+                            android:id="@+id/fragment_graphics_tv_this_month_spendings"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:layout_margin="4dp"/>
+                        <TextView
+                            android:id="@+id/fragment_graphics_tv_this_month_CO2"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:layout_margin="4dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Spinner
+                android:id="@+id/fragment_graphics_spn_graph_type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_graphics_cv_consumption_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/spinner_selector"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/fragment_graphics_pie_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="300dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_graphics_spn_graph_type"
+                app:layout_constraintBottom_toTopOf="@id/fragment_graphics_tv_predict"
+                app:layout_constraintVertical_bias="0.25"
+
+
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:id="@+id/fragment_graphics_tv_predict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_green"
+                android:elevation="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_graphics_pie_chart"
+                android:text="Estimează consumul pe luna viitoare"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="15dp"
+                android:paddingVertical="6dp"
+                android:textSize="18sp"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="invisible"
+                android:id="@+id/fragment_graphics_cl_prediction"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/fragment_graphics_tv_predict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/fragment_graphics_iv_robot"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/robot_login_bg"/>
+
+                <TextView
+                    android:id="@+id/fragment_graphics_tv_prediction_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/fragment_graphics_iv_robot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/fragment_graphics_iv_robot"
+                    app:layout_constraintBottom_toBottomOf="@id/fragment_graphics_iv_robot"
+                    app:layout_constraintVertical_bias="0.15"
+                    android:layout_marginStart="80dp"
+                    android:textSize="16dp"
+                    android:text="Ne pare rău, estimarea\n nu este posibilă"
+                    android:textColor="@color/ligh_green"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@id/fragment_graphics_cl_prediction"
+                app:layout_constraintEnd_toEndOf="@id/fragment_graphics_cl_prediction"
+                app:layout_constraintTop_toTopOf="@id/fragment_graphics_cl_prediction"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_graphics_cl_prediction"
+                android:id="@+id/fragment_graphics_pb_predict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:alliance_animDuration="500"
+                app:alliance_distanceMultiplier="4"
+                app:alliance_dotsRadius="18dp"
+                app:alliance_drawOnlyStroke="true"
+                app:alliance_firstDotsColor="@color/ligh_green"
+                app:alliance_secondDotsColor="@color/deep_green"
+                app:alliance_strokeWidth="8dp"
+                app:alliance_thirdDotsColor="@color/medium_green" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_graphics_cl_prediction"
+                android:layout_marginVertical="18dp"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="10sp"
+                android:textColor="@color/medium_gray"
+                android:textStyle="italic"
+                android:text="Rezultatul estimării nu este 100% corect. Acesta este influențat de durata și corectitudinea utilizării aplicației. Pentru utilizatorii noi aceasta nu va funcționa."
+                android:layout_height="wrap_content"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
+
+    <com.agrawalsuneet.dotsloader.loaders.CircularDotsLoader
+        android:id="@+id/fragment_graphics_progress_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:loader_animDur="100"
+        app:loader_bigCircleRadius="42dp"
+        app:loader_circleRadius="14dp"
+        app:loader_defaultColor="@color/dark_gray"
+        app:loader_firstShadowColor="@color/medium_gray"
+        app:loader_secondShadowColor="@color/medium_gray"
+        app:loader_selectedColor="@color/medium_gray"
+        app:loader_showRunningShadow="true"
+        android:visibility="gone"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

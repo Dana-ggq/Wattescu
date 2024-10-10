@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lv_row_view_custom_configuration_appliances_cv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="8dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/lv_row_view_custom_configuration_appliances_tv_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/lv_row_view_custom_configuration_appliances_iv_image"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:contentDescription="@string/animImage"
+                android:maxHeight="70dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/appliance_not_found"
+                android:transitionName="@string/animImage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.agrawalsuneet.dotsloader.loaders.TrailingCircularDotsLoader
+                android:id="@+id/lv_row_view_custom_configuration_appliances_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:trailingcircular_animDelay="0"
+                app:trailingcircular_animDuration="100"
+                app:trailingcircular_bigCircleRadius="20dp"
+                app:trailingcircular_dotsColor="@color/medium_gray"
+                app:trailingcircular_dotsRadius="5dp"
+                app:trailingcircular_noOfTrailingDots="4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/lv_row_view_custom_configuration_appliances_tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lv_row_view_custom_configuration_appliances_cv_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/lv_row_view_custom_configuration_appliances_tv_replacement_for"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.5dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:maxLines="2"
+
+
+        android:text="@string/msg_no_appliance_to_replace"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lv_row_view_custom_configuration_appliances_cv_image"
+        app:layout_constraintTop_toBottomOf="@id/lv_row_view_custom_configuration_appliances_tv_name" />
+
+
+    <TextView
+        android:id="@+id/lv_row_view_custom_configuration_appliances_tv_consumption_reduction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:maxLines="2"
+
+        android:text="@string/nothing"
+        android:textColor="@color/medium_gray_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lv_row_view_custom_configuration_appliances_cv_image"
+        app:layout_constraintTop_toBottomOf="@id/lv_row_view_custom_configuration_appliances_tv_replacement_for" />
+
+    <TextView
+        android:id="@+id/lv_row_view_custom_configuration_appliances_tv_savings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:maxLines="2"
+
+
+        android:text="@string/nothing"
+        android:textColor="@color/medium_gray_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lv_row_view_custom_configuration_appliances_cv_image"
+        app:layout_constraintTop_toBottomOf="@id/lv_row_view_custom_configuration_appliances_tv_consumption_reduction" />
+
+    <TextView
+        android:id="@+id/lv_row_view_custom_configuration_appliances_tv_Co2_emissions_reduction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:maxLines="2"
+
+
+        android:text="@string/nothing"
+        android:textColor="@color/medium_gray_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lv_row_view_custom_configuration_appliances_cv_image"
+        app:layout_constraintTop_toBottomOf="@id/lv_row_view_custom_configuration_appliances_tv_savings" />
+
+    <TextView
+        android:id="@+id/lv_row_view_custom_configuration_appliances_tv_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:maxLines="2"
+
+        android:text="@string/price_details_format"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintEnd_toStartOf="@id/lv_row_view_custom_configuration_appliances_tv_link"
+        app:layout_constraintStart_toEndOf="@id/lv_row_view_custom_configuration_appliances_cv_image"
+        app:layout_constraintTop_toBottomOf="@id/lv_row_view_custom_configuration_appliances_tv_Co2_emissions_reduction" />
+
+    <TextView
+        android:id="@+id/lv_row_view_custom_configuration_appliances_tv_link"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:maxLines="2"
+
+        android:text="@string/cump_r_aici"
+        android:textAlignment="viewEnd"
+        android:textStyle="italic"
+        android:textColor="@color/medium_gray_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lv_row_view_custom_configuration_appliances_tv_price"
+        app:layout_constraintTop_toBottomOf="@id/lv_row_view_custom_configuration_appliances_tv_Co2_emissions_reduction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="4dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

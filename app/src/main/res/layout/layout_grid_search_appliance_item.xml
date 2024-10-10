@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="3dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layout_grid_appliance_cv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:cardCornerRadius="10dp"
+        android:elevation="30dp"
+        android:fadingEdgeLength="3dp"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+
+                android:transitionName="@string/animImage"
+                android:id="@+id/layout_grid_appliance_iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:maxHeight="100dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/white_placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+
+            <TextView
+                android:id="@+id/layout_grid_appliance_tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/black"
+                android:layout_margin="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Plitaelectrica philips, A ++ "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/layout_grid_appliance_iv_save"
+                app:layout_constraintTop_toBottomOf="@id/layout_grid_appliance_iv_image"/>
+
+            <ImageView
+                android:id="@+id/layout_grid_appliance_iv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_favorite_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/layout_grid_appliance_tv_title"
+                app:layout_constraintTop_toBottomOf="@id/layout_grid_appliance_iv_image"
+                android:tag="@string/not_saved"
+                 />
+
+
+            <TextView
+                android:id="@+id/layout_grid_appliance_tv_price"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/price_format"
+                android:textColor="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/layout_grid_appliance_tv_power"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_grid_appliance_tv_title"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/layout_grid_appliance_tv_power"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toEndOf="@id/layout_grid_appliance_tv_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_grid_appliance_tv_title"
+                android:text="@string/format_yearly_consumption"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/ligh_green"
+                android:textAlignment="textEnd"
+                />
+
+            <com.agrawalsuneet.dotsloader.loaders.TrailingCircularDotsLoader
+                android:id="@+id/layout_grid_appliance_progress_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/layout_grid_appliance_iv_image"
+                app:layout_constraintBottom_toBottomOf="@id/layout_grid_appliance_iv_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:trailingcircular_animDelay="0"
+                app:trailingcircular_animDuration="100"
+                app:trailingcircular_bigCircleRadius="20dp"
+                app:trailingcircular_dotsColor="@color/medium_gray"
+                app:trailingcircular_dotsRadius="5dp"
+                app:trailingcircular_noOfTrailingDots="4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lv_row_bulbs_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lv_row_bulbs_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/lv_row_bulbs_tv_name"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="@color/dark_gray"
+                android:textStyle="bold"
+                android:textSize="16sp"
+
+
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+
+                app:layout_constraintEnd_toStartOf="@id/lv_row_bulbs_tv_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lv_row_bulbs_tv_header"
+
+                app:layout_constraintStart_toStartOf="@id/lv_row_bulbs_tv_consumption_this_month"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                android:layout_width="0dp"
+                android:textAlignment="textStart"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="8dp"
+
+                android:text = "@string/luna_aceasta"
+                />
+
+            <TextView
+                android:id="@+id/lv_row_bulbs_tv_type"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lv_row_bulbs_tv_name"
+                app:layout_constraintEnd_toStartOf="@id/lv_row_bulbs_iv_light_bolb"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="12dp"
+
+
+                />
+
+            <ImageView
+                android:id="@+id/lv_row_bulbs_iv_light_bolb"
+
+                android:contentDescription="@string/vector_icon"
+                android:layout_width="33dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_electric_bolt"
+
+                app:layout_constraintEnd_toStartOf="@id/lv_row_bulbs_tv_consumption_this_month"
+                app:layout_constraintStart_toEndOf="@id/lv_row_bulbs_tv_type"
+                app:layout_constraintTop_toBottomOf="@id/lv_row_bulbs_tv_header"
+                app:tint="@color/mustard"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+
+                />
+
+            <TextView
+                android:id="@+id/lv_row_bulbs_tv_consumption_this_month"
+
+                android:layout_width="wrap_content"
+                android:minWidth="50dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:singleLine="true"
+
+
+                app:layout_constraintStart_toEndOf="@id/lv_row_bulbs_iv_light_bolb"
+                app:layout_constraintTop_toBottomOf="@id/lv_row_bulbs_tv_header" />
+
+            <TextView
+                android:id="@+id/lv_row_bulbs_tv_spendings_this_month"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/ligh_green"
+
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/lv_row_bulbs_tv_consumption_this_month"
+                app:layout_constraintTop_toBottomOf="@id/lv_row_bulbs_tv_consumption_this_month" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lv_row_bulbs_ll"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/lv_row_bulbs_fab_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:backgroundTint="@color/light_gray"
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_close"
+                    android:layout_margin="6dp"
+                    />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/lv_row_bulbs_fab_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:backgroundTint="@color/coral"
+                    android:src="@drawable/ic_delete_forever"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="2dp"
+                    />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/lv_row_bulbs_fab_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:backgroundTint="@color/ligh_green"
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="2dp"
+                    />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

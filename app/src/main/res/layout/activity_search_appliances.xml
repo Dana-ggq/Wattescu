@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".SearchAppliancesActivity">
+
+    <LinearLayout
+        android:id="@+id/search_appliance_ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Descopera"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="alege sustenabilitatea si eficienta"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="111dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/robot_search" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/search_appliance_sv_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_appliance_ll_header">
+
+        <RadioGroup
+            android:id="@+id/search_appliance_rg_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="4dp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/search_appliance_rb_all"
+                android:layout_width="100dp"
+                android:layout_height="37dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:checked="true"
+                android:elevation="6dp"
+                android:text="@string/rb_toate"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_text" />
+
+            <RadioButton
+                android:id="@+id/search_appliance_rb_bathroom"
+                android:layout_width="100dp"
+                android:layout_height="37dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="2dp"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:elevation="6dp"
+                android:text="@string/rb_baie"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_text" />
+
+            <RadioButton
+                android:id="@+id/search_appliance_rb_office"
+                android:layout_width="100dp"
+                android:layout_height="37dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="2dp"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:elevation="6dp"
+                android:text="@string/rb_birou"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_text" />
+
+            <RadioButton
+                android:id="@+id/search_appliance_rb_kitchen"
+                android:layout_width="100dp"
+                android:layout_height="37dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="2dp"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:elevation="6dp"
+                android:text="@string/rb_bucatarie"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_text" />
+
+            <RadioButton
+                android:id="@+id/search_appliance_rb_living_room"
+                android:layout_width="100dp"
+                android:layout_height="37dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="2dp"
+                android:background="@drawable/radio_selector"
+                android:button="@color/transparent"
+                android:elevation="6dp"
+                android:text="@string/rb_living"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_text" />
+
+        </RadioGroup>
+
+    </HorizontalScrollView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_appliance_til_search"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="6dp"
+
+        android:transitionGroup="true"
+        app:boxBackgroundColor="@color/white_smoke"
+        android:background="@drawable/round_corners_white_bg"
+
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+
+        app:boxStrokeColor="@color/medium_gray"
+        app:boxStrokeWidth="0dp"
+        app:expandedHintEnabled="true"
+        app:hintAnimationEnabled="true"
+
+        app:hintTextColor="@color/dark_gray"
+        app:layout_constraintEnd_toStartOf="@id/search_appliance_iv_sort"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/search_appliance_sv_radio_group"
+        app:startIconDrawable="@drawable/ic_search">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_appliance_tiet_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:hint="@string/cauta"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/search_appliance_iv_sort"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="6dp"
+        android:background="@drawable/round_white_background"
+        android:padding="1dp"
+        android:elevation="5dp"
+        android:outlineAmbientShadowColor="@color/dark_gray"
+        android:outlineSpotShadowColor="@color/dark_gray"
+
+        android:src="@drawable/ic_sort"
+        app:layout_constraintBottom_toBottomOf="@+id/search_appliance_til_search"
+        app:layout_constraintEnd_toStartOf="@id/search_appliance_iv_filter"
+        app:layout_constraintStart_toEndOf="@id/search_appliance_til_search"
+        app:layout_constraintTop_toBottomOf="@id/search_appliance_sv_radio_group" />
+
+    <ImageView
+        android:id="@+id/search_appliance_iv_filter"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="6dp"
+
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/round_white_background"
+        android:padding="1dp"
+
+        android:elevation="5dp"
+        android:outlineAmbientShadowColor="@color/dark_gray"
+        android:outlineSpotShadowColor="@color/dark_gray"
+        android:src="@drawable/ic_filter"
+        app:layout_constraintBottom_toBottomOf="@+id/search_appliance_til_search"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@id/search_appliance_iv_sort"
+        app:layout_constraintTop_toBottomOf="@id/search_appliance_sv_radio_group" />
+
+    <LinearLayout
+        android:id="@+id/search_appliance_ll_not_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_appliance_til_search"
+        app:layout_constraintVertical_bias="0.344">
+
+        <ImageView
+            android:layout_width="145dp"
+            android:layout_height="105dp"
+            android:layout_gravity="center"
+            android:src="@drawable/appliance_not_found" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:text="Nu au fost găsite rezultate"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="2dp"
+            android:text="În momentul de față nu există articole care să corespundă filtrului specificat. Elimină filtrul sau schimbă camera în care cauți."
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/search_appliance_tv_no_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/medium_gray"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_appliance_til_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_appliance_rv_appliances"
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+        android:nestedScrollingEnabled="true"
+        android:orientation="vertical"
+        android:transitionGroup="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_appliance_tv_no_results">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.agrawalsuneet.dotsloader.loaders.CircularDotsLoader
+        android:id="@+id/search_appliance_progress_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_appliance_rv_appliances"
+        app:layout_constraintBottom_toBottomOf="@id/search_appliance_rv_appliances"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:loader_animDur="100"
+        app:loader_bigCircleRadius="42dp"
+        app:loader_circleRadius="14dp"
+        app:loader_defaultColor="@color/light_gray"
+        app:loader_firstShadowColor="@color/medium_gray"
+        app:loader_secondShadowColor="@color/white_smoke"
+        app:loader_selectedColor="@color/medium_gray"
+        app:loader_showRunningShadow="true"
+        android:visibility="gone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

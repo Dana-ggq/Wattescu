@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "72945224708",
+    "firebase_url": "https://wattescu-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "wattescu",
+    "storage_bucket": "wattescu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72945224708:android:ddb9f5953664ec39447951",
+        "android_client_info": {
+          "package_name": "com.example.wattescu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72945224708-7upi6hg5tbqm8epcqio9j7qv8cdmnipi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1P0ed6zPRZusdpIhQ7_5Rq5U0gz6_Ovg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72945224708-7upi6hg5tbqm8epcqio9j7qv8cdmnipi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

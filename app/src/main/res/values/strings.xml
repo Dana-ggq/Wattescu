@@ -1,0 +1,348 @@
+<resources>
+    <string name="app_name">Wattescu</string>
+    <string name="splash_screen_title_wattescu">Wattescu</string>
+    <string name="login_buna">Bună,</string>
+    <string name="login_logeaza_te_pentru_a_continua">Logează-te pentru a continua</string>
+    <string name="login_hint_username">Username</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_utilizator_nou">Utilizator nou?</string>
+    <string name="login_sign_up">Sign up</string>
+    <string name="animation_logo_image">logo_image</string>
+    <string name="animation_logo_text">logo_text</string>
+    <string name="singup_inregistreaza_te_pentru_a_incepe">Înregistrează-te pentru a începe</string>
+    <string name="signup_email">Email</string>
+    <string name="singup_ai_deja_un_cont">Ai deja un cont?</string>
+    <string name="signup_login">Login</string>
+    <string name="animation_secondary_text">animation_secondary_text</string>
+    <string name="animation_username">animation_username</string>
+    <string name="animation_password">animation_password</string>
+    <string name="animation_button_next">animation_button_next</string>
+    <string name="animation_linear_singup_login">animation_signup_login</string>
+    <string name="animation_email">animation_email</string>
+    <string name="animation_logo_image_bulb">animation_logo_image_bulb</string>
+    <string name="animation_text_h1">animation_text_h1</string>
+    <string name="animation_text_h2">animation_text_h2</string>
+    <string name="animation_forgot_password">animation_forgot_password</string>
+    <string name="animation_new_user">animation_new_user</string>
+    <string name="animation_sign_up">animation_sign_up</string>
+    <string name="err_msg_singup_email">Adresă de email invalidă</string>
+    <string name="err_msg_signup_username">Nume de utilizator invalid.</string>
+    <string name="err_msg_signup_password">     Parolă invalidă.     </string>
+    <string name="msg_singup_succesfullRegistration">Înregistrarea a avut loc cu succes.\n Accesați email-ul de confirmare.</string>
+    <string name="msg_signup_failedRegistration">Înregistrare eșuată. Încercați din nou.</string>
+    <string name="msg_signup_emailAlreadyExists">Adresa de email introdusă este deja înregistrată.</string>
+    <string name="msg_login_err_email">Introduce-ți adresa de email</string>
+    <string name="msg_login_err_password">Introduce-ți parola.</string>
+    <string name="msg_login_err_wrongCredentials">Logare eșuată!\nEmail sau parolă incorecte.</string>
+    <string name="reset_password_dialog_introduceti_adresa_de_email">Introduceți adresa de email</string>
+    <string name="login_alert_dialog_reset_password_title">Ai uitat parola?</string>
+    <string name="login_dialog_reset_password_ok">Resetare parolă</string>
+    <string name="login_dialog_reset_password_cancel">Anulare</string>
+    <string name="login_link_send_on_email">Link-ul pentru resetarea parolei a fost trimis pe email.</string>
+    <string name="login_dialog_reset_password_error">Oops... a apărut o eroare\n Reîncercați.</string>
+    <string name="msg_login_verify_account">Pentru a confirma contul verificați mai întâi mail-ul.\n</string>
+    <string name="bottom_menu_selected">.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_schimba_username">Schimbă username</string>
+    <string name="settings_schimba_parola">Schimbă parola</string>
+    <string name="settings_delogeaza_te">Delogează-te</string>
+    <string name="settings_acceseaza_link_ul">Acceseaza link-ul</string>
+    <string name="settings_provider">pentru a vedea ce ofertă\nse potrivește obiceiurilor tale\nde consum</string>
+    <string name="editeaza_date_furnizor_energie">Editează date furnizor energie</string>
+    <string name="msg_settings_change_password">Resetează parola</string>
+    <string name="new_username">New username</string>
+    <string name="settings_title_change_username">Editează username</string>
+    <string name="reset_dialog_ok">Ok</string>
+    <string name="general_error_msg">Ne pare rău a apărut o eroare.\nReîncercați!</string>
+    <string name="msg_username_succesfully_changed">Username-ul a fost modificat cu succes.</string>
+    <string name="sterge_cont_si_date_asociate">Șterge cont și date asociate</string>
+    <string name="setting_delete_account">Șterge cont</string>
+    <string name="setting_msg_dialog_delete_account">Sigur vrei ca acest cont să fie șters? Datele nu vor mai putea fi recuperate.</string>
+    <string name="selecteaza_furnizor">Furnizor energie electrică</string>
+    <string name="pretul_mediu_pentru_1kw_h">Preț mediu pentru 1kWh</string>
+    <string name="msg_setting_deleted_provider">Furnizor personalizat șters.</string>
+    <string name="msg_provider_data_saved">Date furnizor salvate cu succes.</string>
+    <string name="stiri">Știri</string>
+    <string name="activitati">Activități</string>
+    <string name="msg_news_fetching_error">Sorry, there was a fetching error...</string>
+    <string name="see_full_article">Articolul complet:</string>
+    <string name="luna_aceasta">Luna aceasta</string>
+    <string name="xx_kwh">%1$.0f kWh</string>
+    <string name="xxx_lei">%1$.0f lei</string>
+    <string name="azi">Azi</string>
+    <string name="degrees_format">%1$.1f°C</string>
+    <string name="settings_button">setting_button</string>
+    <string name="hello_user_message">Buna %1$s</string>
+    <string name="slogan_user_profile">redu consumul energetic, salvează planeta,\nsalvează buzunarul tău</string>
+    <string name="consum_energetic">Consum energetic</string>
+    <string name="vector_icon">vector_icon</string>
+    <string name="becurile_mele">Becurile mele</string>
+    <string name="bulbs">bulbs</string>
+    <string name="empty">-</string>
+    <string name="no_nsenzor">no\nsenzor</string>
+    <string name="cauta_dupa_denumire">Caută după denumire</string>
+    <string name="salveaza">Salvează</string>
+    <string name="adauga_bec">Adaugă bec</string>
+    <string name="luni">luni</string>
+    <string name="marti">marți</string>
+    <string name="miercuri">miercuri</string>
+    <string name="_00_00">00:00</string>
+    <string name="bulb_form_tag">bulb_form_dialog_fragment</string>
+    <string name="nume_identificare_bec">Nume identificare bec</string>
+    <string name="bulb_name_exemple">Bec veioză dormitor</string>
+    <string name="tip_bec">Tip bec</string>
+    <string name="putere_bec">Putere bec</string>
+    <string name="bulb_power_hint">10</string>
+    <string name="watt">W</string>
+    <string name="obiceiuri_de_consum">Obiceiuri de consum</string>
+    <string name="durata_medie_de_utilizare_pe_zi">Durată medie de utilizare pe zi</string>
+    <string name="selecteaza_durata">Selectează durata</string>
+    <string name="inregistreaza_consum_diferentiat_pe_zile">Înregistrează consum diferențiat pe zile</string>
+    <string name="joi">joi</string>
+    <string name="vineri">vineri</string>
+    <string name="sambata">sâmbătă</string>
+    <string name="duminica">duminică</string>
+    <string name="modifica_bec">Modifică bec</string>
+    <string name="hour_format">%02d:%02d</string>
+    <string name="msg_delete_bulb">Elimină becul</string>
+    <string name="dialog_msg_sterge">șterge</string>
+    <string name="format_consumption">%1$.2f kWh</string>
+    <string name="format_consumption_int">%1$d kWh</string>
+    <string name="format_spendings">%1$.2f lei</string>
+    <string name="rooms">rooms</string>
+    <string name="appliences">appliances</string>
+    <string name="camera">Camera</string>
+    <string name="adauga_electrocasnic">Adaugă electrocasnic</string>
+    <string name="nume_identificare_electrocasnic">Nume identificare electrocasnic</string>
+    <string name="televizor_sufragerie">televizor sufragerie</string>
+    <string name="tip_electrocasnic">Tip electrocasnic</string>
+    <string name="putere_electrocasnic">Putere electrocasnic</string>
+    <string name="_50">50</string>
+    <string name="clasa_energetica">Clasa energetica</string>
+    <string name="modifica_electrocasnic">Modifică electrocasnic</string>
+    <string name="camerele_nmele">Camerele\nmele</string>
+    <string name="electrocasnicele_nmele">Electrocasnicele\nmele</string>
+    <string name="sorteaza_dupa_consum">Sortează dupa consum</string>
+    <string name="electrocasnicele_mele">Electrocasnicele mele</string>
+    <string name="appliance_tag">appliance_tag</string>
+    <string name="delete_bulb_msg">Sigur vrei să elimini becul selectat? Datele nu pot fi recuperate.</string>
+    <string name="msg_delete_appliance">Sigur vrei să elimini electrocasnicul selectat? Datele nu pot fi recuperate.</string>
+    <string name="format_efficiency_class">clasa %1$s</string>
+    <string name="camerele_mele">Camerele mele</string>
+    <string name="format_no_devices">%1$d electrocasnice\n%2$d becuri</string>
+    <string name="adauga_camera">Adaugă camera</string>
+    <string name="nume_identificare_camera">Nume identificare camera</string>
+    <string name="exemple_room">dormitor copii</string>
+    <string name="tip_camera">Tip cameră</string>
+    <string name="room_form_tag">room_form_tag</string>
+    <string name="delete_appliance_title">Elimină electrocasnicul</string>
+    <string name="title_delete_room">Șterge camera</string>
+    <string name="msg_delete_room">Dorești inclusiv ștergerea electrocasnicelor și becurilor din camera?</string>
+    <string name="da">Da</string>
+    <string name="nu">Nu</string>
+    <string name="vizualizeaza_becurile_sau_electrocasnicele_din_camera">Vizualizează becurile sau electrocasnicele din camera</string>
+    <string name="format_bulbs_view_title">Becuri %1$s</string>
+    <string name="format_appliances_view_title">Electrocasnice %1$s</string>
+    <string name="format_date_graph">%1$s, %2$d</string>
+    <string name="format_excel_title">consum%1$s%2$d.xls</string>
+    <string name="mail_subject">Detalii consum energie electrica</string>
+    <string name="mail_body_text">Downloadeaza fișierul xsl de mai jos:</string>
+    <string name="msg_wait">Vă rugăm așteptați</string>
+    <string name="send_email_msg">Se salvează fișierul și se trimite email.</string>
+    <string name="email_succes">Emailul a fost trimis</string>
+    <string name="file_saved">Fișier salvat</string>
+    <string name="rb_toate">toate</string>
+    <string name="rb_baie">baie</string>
+    <string name="rb_living">living</string>
+    <string name="rb_bucatarie">bucătărie</string>
+    <string name="rb_birou">birou</string>
+    <string name="cauta">Caută</string>
+    <string name="price_format">%1$.2f lei</string>
+    <string name="format_yearly_consumption">%1$d kWh/an</string>
+    <string name="format_power">%1$d W</string>
+    <string name="format_no_appliances_found">S-au găsit %1$d rezultate</string>
+    <string name="not_saved">not_saved</string>
+    <string name="saved">saved</string>
+    <string name="elimin_filtru">elimină filtru</string>
+    <string name="animImage">imageDetails</string>
+    <string name="title">title</string>
+    <string name="description">description</string>
+    <string name="consum_anual">consum anual</string>
+    <string name="putere">putere</string>
+    <string name="clas_eficien">clasă eficiență</string>
+    <string name="price_details_format">preț: %.0f lei</string>
+    <string name="cump_r_aici">cumpără aici</string>
+    <string name="nlocuire_pentru">Înlocuire pentru</string>
+    <string name="format_consumption_reduction">Consum anual redus cu: %1$.0f kWh</string>
+    <string name="format_savings">Economisire anuală: %1$.0f lei</string>
+    <string name="format_co2_emissions_reduction">Diminuare emisii CO2 pe an: %1$.0f kg</string>
+    <string name="zero">0</string>
+    <string name="configura_ii">Configurații</string>
+    <string name="electrocasnice">electrocasnice</string>
+    <string name="format_lv_saved_appliance_consumption_reduction">consum anual mai mic cu %1$.0f kWh</string>
+    <string name="denumire_configura_ie">Denumire configurație</string>
+    <string name="configuration_creates_message">Configurație creată</string>
+    <string name="introduce_name">Introduceți un nume.</string>
+    <string name="err_custom_config_select_2_appliances">Selectați cel puțin 2 electrocasnice.</string>
+    <string name="err_configuration_add_name">Adăugați o denumire.</string>
+    <string name="err_configuraiton_replace_appliance">Electrocasnicele din configurație trebuie să înlocuiască un electrocasnic curent</string>
+    <string name="err_configuration_appliance_already_selected">A fost deja selectat un înlocuitor pentru electrocasnicul curent</string>
+    <string name="msg_categories_differ">Ai grijă categoriile electrocasnicelor sunt cam diferite...</string>
+    <string name="format_configuration_anual_reduction">Anual economisesti %1$.0f kWh</string>
+    <string name="format_configuration_no_appliances">%1$d electocasnice</string>
+    <string name="format_replacement_for_appliance">înlocuiește: %1$s</string>
+    <string name="Electrocasnice">Electrocasnice</string>
+    <string name="customize_desc">Selectează categoriile de electrocasnice\n pe care le dorești</string>
+    <string name="continua">Continuă</string>
+    <string name="frigider">Frigider</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="lad_frigorific">Ladă frigorifică</string>
+    <string name="ma_in_de_sp_lat">Mașină de spălat</string>
+    <string name="aer_condi_ionat">Aer condiționat</string>
+    <string name="televizor">Televizor</string>
+    <string name="monitor">Monitor</string>
+    <string name="boiler">Boiler</string>
+    <string name="cuptor_electric">Cuptor electric</string>
+    <string name="desktop_pc">Desktop PC</string>
+    <string name="microunde">Microunde</string>
+    <string name="imprimant">Imprimantă</string>
+    <string name="aloc_un_buget">Alocă un buget:</string>
+    <string name="msg_err_budget">Introduceți un buget valid.</string>
+    <string name="msg_infesible_config_not_found">Ne pare rău nu am găsit ceea ce cauți.</string>
+    <string name="msg_infesible_config_internal_error">Ne pare rău, dar nu putem realiza configurația ta... încearcă mai târziu</string>
+    <string name="msg_no_appliance_to_replace">Nu au fost selectate electrocasnice de înlocuit.</string>
+    <string name="nothing">-</string>
+    <string name="err_msg_replaces_same_appliance">Unele electrocasnice noi înlocuiesc același electrocasnic curent!</string>
+    <string name="msg_not_all_appliances_have_replacement">Atenție! Nu au fost selectate electrocasnice de înlocuit pentru toată configurația.</string>
+    <string name="deleted_account_message">Contul a fost șters.</string>
+
+    <string-array name="providers">
+        <item>CEZ Vanzare S.A.</item>
+        <item>ENEL Energie S.A.</item>
+        <item>E.ON Energie Romania S.A.</item>
+        <item>ENEL Energie Muntenia S.A.</item>
+        <item>Electrica Furnizare S.A.</item>
+        <item>Tinmar Energy</item>
+        <item>Alive Capital</item>
+        <item>BEPCO</item>
+        <item>C.E. Oltenia </item>
+        <item>C.E.T. Arad</item>
+        <item>C.E.T. Govora</item>
+        <item>East Wind Farm S.R.L.</item>
+        <item>Electricom S.A.</item>
+        <item>Electrocentrale Bucuresti S.A</item>
+        <item>Enet S.A.</item>
+        <item>Enex S.R.L.</item>
+        <item>EOL Energy S.R.L.</item>
+        <item>Ewind</item>
+        <item>Green Vision Seven S.R.L.</item>
+        <item>S.P.E.E.H. Hidroelectrica S.A.</item>
+        <item>Modern Calor S.A.</item>
+        <item>Monsson Trading</item>
+        <item>OMV Petrom S.A.</item>
+        <item>Nuclearelectrica S.A.</item>
+        <item>Petrotel-Lukoil S.A.</item>
+        <item>Ra-Ra Parc</item>
+        <item>SNGN Romgaz S.A.</item>
+        <item>Renovation Trading S.R.L.</item>
+        <item>Skybase Energy</item>
+        <item>Veolia Energie Prahova</item>
+        <item>Verbund Wind Power Romania</item>
+        <item>A Energy Ind S.R.L.</item>
+        <item>Absolute Energy S.R.L.</item>
+        <item>Aderro G.P. Energy S.R.L.</item>
+        <item>AIK Energy Romania S.R.L.</item>
+        <item>Aqua Energia S.A.</item>
+        <item>Crest Energy S.R.L.</item>
+        <item>Electric Planners S.R.L.</item>
+        <item>Engie Romania S.A.</item>
+        <item>Romelectro Bucuresti S.A.</item>
+        <item>Sun Wave Energy SRL</item>
+        <item>Veolia Energie Romania S.A.</item>
+        <item>Werk Energy S.R.L.</item>
+    </string-array>
+
+    <string-array name="bulb_type">
+        <item>incandescent cu filament</item>
+        <item>LED</item>
+        <item>economic</item>
+        <item>altele</item>
+    </string-array>
+
+    <string-array name="appliance_types">
+        <item>laptop</item>
+        <item>notebook</item>
+        <item>computer</item>
+        <item>imprimanta</item>
+        <item>scanner</item>
+        <item>play station</item>
+        <item>alarme si senzori</item>
+        <item>camere de supraveghere</item>
+        <item>sistem DVD</item>
+        <item>monitor</item>
+        <item>telefon fix</item>
+        <item>telefon mobil</item>
+        <item>tablete</item>
+        <item>dispozitiv smart cu incarcare</item>
+        <item>televizor</item>
+        <item>videoproiector</item>
+        <item>combina frigorifica</item>
+        <item>frigider</item>
+        <item>lada frigorifica</item>
+        <item>congelator</item>
+        <item>masina de spalat rufe</item>
+        <item>uscator de rufe</item>
+        <item>masina de spalat vase</item>
+        <item>aragaz electric</item>
+        <item>plita electrica</item>
+        <item>cuptor cu microunde</item>
+        <item>aparat de aer conditionat</item>
+        <item>calorifer electric</item>
+        <item>purificator aer</item>
+        <item>dezumidificator</item>
+        <item>centrala termica</item>
+        <item>boiler</item>
+        <item>dozator de apa</item>
+        <item>hota</item>
+        <item>aspirator</item>
+        <item>aparat preparare cafea</item>
+        <item>ingrijire tesaturi</item>
+        <item>electrocasnice pentru bucatarie</item>
+        <item>electrocasnice ingrijirea parului</item>
+        <item>electrocasnice ingrijirea dentara</item>
+        <item>articole sanatate si wellness</item>
+    </string-array>
+
+    <string-array name="efficiency_class">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>-</item>
+    </string-array>
+
+    <string-array name="room_type">
+        <item>dormitor</item>
+        <item>sufragerie</item>
+        <item>baie</item>
+        <item>bucătărie</item>
+        <item>birou</item>
+        <item>garaj</item>
+        <item>hol</item>
+        <item>cămară</item>
+        <item>balcon</item>
+        <item>spălătorie</item>
+        <item>altele</item>
+    </string-array>
+
+    <string-array name="graphic_type">
+        <item>camere</item>
+        <item>becuri</item>
+        <item>electrocasnice</item>
+    </string-array>
+
+</resources>
